@@ -34,7 +34,7 @@ const List: FC<TListProps> = ({ list, boardId }) => {
   const handleTaskChange = (
     boardId: string,
     listId: string,
-    taskId: string,
+    // taskId: string,
     task: ITask
   ) => {
     dispatch(setModalData({ boardId, listId, task }));
@@ -58,9 +58,7 @@ const List: FC<TListProps> = ({ list, boardId }) => {
           </div>
           {list.tasks.map((task, index) => (
             <div
-              onClick={() =>
-                handleTaskChange(boardId, list.listId, task.taskId, task)
-              }
+              onClick={() => handleTaskChange(boardId, list.listId, task)}
               key={task.taskId}
             >
               <Task
