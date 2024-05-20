@@ -27,7 +27,7 @@ const LoggerModal: FC<TLoggerModalProps> = ({ setIsLoggerOpen }) => {
         </div>
         <div className={body}>
           {logs.map((log) => (
-            <LogItem key={log.logId} LogItem={log} />
+            <LogItem key={log.logId} logItem={log} />
           ))}
         </div>
       </div>
